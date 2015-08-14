@@ -1,37 +1,49 @@
-# Cache and logs (Symfony2)
-/app/cache/*
-/app/logs/*
-!app/cache/.gitkeep
-!app/logs/.gitkeep
+# Bolt specific stuff. Don't put config files, databases or 'vendor' in Git.
+app/cache/*
+app/config/*.yml
+app/config/extensions/
+app/database/*
+*config.yml
+files/*
+extensions/*
+thumbs/
+vendor/
+phpunit.xml
 
-# Cache and logs (Symfony3)
-/var/cache/*
-/var/logs/*
-!var/cache/.gitkeep
-!var/logs/.gitkeep
+# Unless you want to store vendor's "state" in your Git repo.
+composer.phar
+composer.lock
 
-# Parameters
-/app/config/parameters.yml
-/app/config/parameters.ini
+# Grunt stuff
+node_modules
+bower_components
+npm-debug.log
+.sass-cache
+app/src/tmp/
+app/src/docs/
+app/src/grunt-local/
 
-# Managed by Composer
-/app/bootstrap.php.cache
-/var/bootstrap.php.cache
-/bin/*
-!bin/console
-!bin/symfony_requirements
-/vendor/
+# Sourcemaps
+app/view/maps/
+*.map
 
-# Assets and user uploads
-/web/bundles/
-/web/uploads/
-
-# PHPUnit
-/app/phpunit.xml
-/phpunit.xml
-
-# Build data
-/build/
-
-# Composer PHAR
-/composer.phar
+# File-system cruft and temporary files
+scrutinizer.phar
+php-cs-fixer.phar
+.DS_Store
+.idea
+__*
+._*
+web
+Vagrantfile
+.vagrant*
+*.sublime-*
+/tags
+.*.swp
+.swp
+*.lock
+.gitignore
+.buildpath
+.project
+/bolt.log
+coverage.xml
